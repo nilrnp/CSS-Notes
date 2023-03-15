@@ -1,0 +1,19 @@
+Absolute Units (are a fixed size):
+- pixels (px)
+
+Percentages:
+- Usually for widths 
+- Relative to their parents 
+
+Relative Units:
+- em (relative to the size of the parent); if parent has size of 3px, 1em on child would also be 3px, 2em would be 2*3px
+- rem (relative to the html element that was set previously; html { fontsize: 10px}, 1.5rem would be 10px*1.5)
+
+Widths (can set different widths based on screen size):
+- min-width 
+- max-width 
+
+General rule of thumb:
+- font size: rems 
+- Padding and margin: ems 
+- Widths: ems or percents

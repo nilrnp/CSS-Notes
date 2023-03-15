@@ -1,0 +1,87 @@
+/* styling a class */
+.container {}
+
+/* styling an id */
+#green {
+  /* text color */
+  color: green;
+
+}
+
+/* styling an element */
+p {}
+
+/* styling multiple elements */
+.left-col,
+.right-col {}
+
+/* descendant selectors (all h2s in container class) */
+.container h2 {}
+
+/* child selectors (will style all p in .container class)*/
+.container>p {}
+
+/* sibling selectors (will style first p in .container class */
+.container+p {}
+
+/* classes/ids per element selection */
+p[class="p-tag"] {}
+
+.left-col {
+  /* borders; width in pixels, border type, border color  */
+  border: 1px solid black;
+  /* padding */
+  padding: 20px;
+  /* width */
+  width: 200px;
+  /* height */
+  height: 200px;
+  /* line height: space between lines */
+  line-height: 20px;
+  /* align text */
+  text-align: center;
+  /* box shadow */
+  box-shadow: 1px 1px 1px 1px blue;
+  /* font-size */
+  font-size: 3px;
+  /* font-family: font type */
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-weight: boldness */
+  font-weight: 200;
+  /* background image */
+  background-image: url("link.jpg");
+  /* background-positioning; size: how much background cover; repeat: if background will repeat if too big; position: where its located */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+
+}
+
+button {
+  /* background color */
+  background-color: navy;
+}
+
+/* hover state (mouse over element) */
+button:hover {
+  /* cursor types */
+  cursor: pointer;
+  /* opacity */
+  opacity: 0.8;
+}
+
+.right-col {
+  /* position: where element is on page; static: (default) will move with scroll; fixed: will stay in place during scroll*/
+  position: static;
+  /* top, bottom, right, left; can change margin and padding on certain sides*/
+  top: 0;
+}
+
+/* media queries, if page reaches certain width apply these styles */
+@media (min-width: 750px) {
+  h2 {
+    color: blue;
+  }
+}
+
+/* measurement units; pixels: pixels on screen; %'s: n% of screen; rem: 1rem= 100% of the html element's size, 1.2 = 120%; em: 1em = 100% of parent element's size */

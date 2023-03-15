@@ -1,0 +1,26 @@
+/* box model contains 5 parts */
+.box1 {
+  /* padding is space between box content and border*/
+  padding: 20px;
+  /* margin is space between box border and other elements*/
+  margin: 20px;
+  border: 1px black solid;
+  width: 200px;
+  height: 200px;
+}
+
+/* display property, block, inline-block, inline*/
+.box2 {
+  /* block; default display; stacks boxes verticallys */
+  display: block;
+  /* inline-block; aligns boxes horizontally */
+  display: inline-block;
+  /* inline; aligns boxes horizontally until there isn't enough space available */
+  display: inline;
+
+  /* box-sizing is used to determine how the width and height of an element is calculated */
+  /* content-box is default for sizing; width and height only include box content */
+  box-sizing: content-box;
+  /* border-box; width and height includes box content and padding and border */
+  box-sizing: border-box;
+}

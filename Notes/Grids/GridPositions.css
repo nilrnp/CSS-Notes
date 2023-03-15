@@ -1,0 +1,81 @@
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+
+  /* repeat(times, unit) makes sizing easier; fr is a fration unit */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 500px 40px;
+
+  /* short-hand */
+  /* grid-template: repeat(2, 50px) / repeat(2, 1fr); */
+
+  /* another way to position items; h:headr, m:menu, c:content, f:footer, .:blank */
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "f f f f f f f f f f f f"
+  ;
+}
+
+.header {
+  /* where column will start */
+  grid-column-start: 2;
+  /* where column will end; 3 to go to end of row because one of the columns is the space between column 1 and 2, or can do -1*/
+  grid-column-end: -1;
+  /* short-hand */
+  grid-column: 2 / -1;
+  /* grid-area connects item to template */
+  grid-area: h;
+}
+
+.menu {
+  grid-row: 1 / 4;
+  grid-area: m;
+}
+
+.content {
+  grid-column: 2 / -1;
+  grid-area: c;
+}
+
+.footer {
+  grid-column: 2 / -1;
+  grid-area: f;
+}
+
+
+
+
+
+
+/* Ignore everything below (just styling) */
+.container>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+
+html,
+body {
+  background-color: #ffeead;
+  margin: 10px;
+}
+
+.container>div:nth-child(1n) {
+  background-color: #96ceb4;
+}
+
+.container>div:nth-child(3n) {
+  background-color: #88d8b0;
+}
+
+.container>div:nth-child(2n) {
+  background-color: #ff6f69;
+}
+
+.container>div:nth-child(4n) {
+  background-color: #ffcc5c;
+}
